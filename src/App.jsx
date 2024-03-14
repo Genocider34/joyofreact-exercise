@@ -1,13 +1,9 @@
-import IteratingOne from "./1. Iterating Avatar/IteratingOne";
-import IteratingTwo from "./2. Iterating CartTable/IteratingTwo";
+import Badges from "./3. Conditional Rendering Badge/Badges";
 
-function App() {
+export default function App() {
   return (
     <>
-      <IteratingOne />
-      <IteratingTwo />
+      <Badges />
     </>
   );
 }
-
-export default App;
