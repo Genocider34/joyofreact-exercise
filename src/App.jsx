@@ -1,9 +1,31 @@
-import Badges from "./3. Conditional Rendering Badge/Badges";
+import React from "react";
 
-export default function App() {
+import VisuallyHidden from "./VisuallyHidden";
+import "./styles.css";
+
+function ClickBallGame() {
+  function handleClick(type) {
+    // if (type === 'win') {
+    //   alert("You win!");
+    // } else {
+    //   alert("You lose :(");
+    // }
+
+    return type === "win" ? alert("You win!") : alert("You lose :(");
+  }
+
   return (
-    <>
-      <Badges />
-    </>
+    <div className="wrapper">
+      <button className="ball" onClick={() => handleClick("win")}>
+        <VisuallyHidden>Ball</VisuallyHidden>
+      </button>
+      <button className="bomb" onClick={handleClick}>
+        <span role="img" aria-label="bomb">
+          💣
+        </span>
+      </button>
+    </div>
   );
 }
+
+export default ClickBallGame;
