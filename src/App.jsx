@@ -1,31 +1,10 @@
 import React from "react";
+import GradientGenerator from "./11.GradientGenerator/GradientGenerator";
 
-import VisuallyHidden from "./VisuallyHidden";
-import "./styles.css";
-
-function ClickBallGame() {
-  function handleClick(type) {
-    // if (type === 'win') {
-    //   alert("You win!");
-    // } else {
-    //   alert("You lose :(");
-    // }
-
-    return type === "win" ? alert("You win!") : alert("You lose :(");
-  }
-
+export default function App() {
   return (
-    <div className="wrapper">
-      <button className="ball" onClick={() => handleClick("win")}>
-        <VisuallyHidden>Ball</VisuallyHidden>
-      </button>
-      <button className="bomb" onClick={handleClick}>
-        <span role="img" aria-label="bomb">
-          💣
-        </span>
-      </button>
+    <div>
+      <GradientGenerator />
     </div>
   );
 }
-
-export default ClickBallGame;
